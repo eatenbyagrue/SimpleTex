@@ -2,6 +2,8 @@ Installation instructions:
 
 * Install the dependencies: Scala 2.7, Sun Java JDK 6, libmysql-java
 
+** JS: if you install an ubunutu 10.04 server, you'll need to enable the 'partner' ubuntu source directory for apt-get to be able to install the sun java
+
 * Uninstall gcj if it's installed as it seems to interfere with the
   Scala compiler. You can safely reinstall it after compiling Etherpad
   if you want to.
