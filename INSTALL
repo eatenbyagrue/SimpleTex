@@ -15,7 +15,15 @@ Installation instructions:
 
 * Create a new user on your system called "etherpad"
 
+* JS: sudo useradd etherpad
+
 * Create a MySQL database "etherpad" and a database user "etherpad"
+
+* JS: login into the mysql command line client, and use these commands
+* JS: create user etherpad identified by 'etherpass';
+* JS:  create database etherpad;
+* JS: grant all on *.* to 'etherpad'@'%' identified by 'etherpass';
+* JS: you may have to change localhost to IP address in the properties config depending on mysql setup
 
 * Copy etherpad/etc/etherpad.localdev-default.properties to etherpad/etc/etherpad.local.properties
 
@@ -27,6 +35,10 @@ Installation instructions:
    etherpad.adminPass
    topdomains
        Example: topdomains = yourhostname.com,localhost
+       
+* JS: Be sure to add a hosts entry on your machine that points to your VM and an IP in the list
+
+* JS: this stuff below doesn't work. run "bin/run.sh" to fire up the server
 
 * Create a link to bin/etherpad.init.d from /etc/init.d/etherpad
 
