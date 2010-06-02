@@ -14,8 +14,12 @@
 \renewcommand\floatpagefraction{0.8} 
 \begin{document}
 \thispagestyle{first}
-\section*{Overview}
-The \STex architecture has five components. Some are composed of many servers:
+\begin{center}
+\Huge{\STex: Architectural Overview}
+\end{center}
+
+The \STex architecture has six components:
+
 \begin{itemize}
 \item \textbf{Web} -- Stateless servers, running (J)Ruby on Rails, for managing application UI. Also handles file upload/download.
 \item \textbf{Database} -- Handles user information, document structure, and permissions.
@@ -24,8 +28,8 @@ The \STex architecture has five components. Some are composed of many servers:
 \item \textbf{Load Listener} -- Monitors load of \LTex and EtherPad servers, and can provision additional servers if needed. Also able to remove servers as load decreases.
 \item \textbf{Message Bus} -- Implemented via Simple Queue Service (SQS). All requests for \LTex processing, EtherPad instances, and other as-yet-undetermined resources from the web servers will be mediated by the message bus.
 \end{itemize}
-\noindent
-Figure \ref{fig_arch} shows the relation and responsibilities of these components.
+
+Figure \ref{fig_arch} shows the relationships between these components.
 
 \begin{figure}[h]
 \centering
