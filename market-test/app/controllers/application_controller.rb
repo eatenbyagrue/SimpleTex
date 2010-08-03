@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+  def index
+    # Make sure /sign_up appears in the URL, for website optimizer.
+    redirect_to url_for(:controller => :sign_up)
+  end
 end
