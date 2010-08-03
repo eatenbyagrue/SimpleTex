@@ -24,3 +24,6 @@ debian/etherpad.substvars
 debian/etherpad
 debian/files
 build-stamp
+#*#
+market-test/log
+market-test/market-test_development
